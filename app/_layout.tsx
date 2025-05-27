@@ -38,11 +38,11 @@ export default function RootLayout() {
     <AuthProvider>
       <ThemeProvider>
         <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
-        <Stack screenOptions={{ headerShown: false }}>
+        <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="auth/login" options={{ headerShown: false, presentation: 'modal' }} />
           <Stack.Screen name="auth/register" options={{ headerShown: false, presentation: 'modal' }} />
-          <Stack.Screen name="+not-found" />
+          <Stack.Screen name="+not-found" options={{ title: 'Oops!' }} />
         </Stack>
       </ThemeProvider>
     </AuthProvider>
